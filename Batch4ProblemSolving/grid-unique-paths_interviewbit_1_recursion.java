@@ -15,7 +15,7 @@ public class Solution {
             return 0;
         }
 
-        //count paths from current node (r,c), if moving down, rows - 1 
+        //count paths from current node (r,c), if moving down, row + 1 
         int downCount = uniquePathsRecursion(r + 1, c, A, B);
         //count paths from current node (r, c), if moving right, col + 1
         int rightCount = uniquePathsRecursion(r, c + 1, A, B);
