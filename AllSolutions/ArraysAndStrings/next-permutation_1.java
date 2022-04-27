@@ -5,8 +5,9 @@
 class Solution {
     public void nextPermutation(int[] nums) {
         int i = nums.length - 2;
+        //for decreasing order, no next larger permutation, it will be sorted by increasing order
         //find the pair of numbers where a[i] >= a[i+1]
-        //until descreasing sequence 
+        //until descreasing sequence
         while(i >= 0 && nums[i] >= nums[i + 1]) {
             i--;
         }
@@ -19,7 +20,8 @@ class Solution {
             }
             swap(nums, i, j);
         } 
-        
+        //since, it is impossible to next lager permutation for descreasing sequence
+        //so next permutation as per question is reset to increasing order
         reverseNums(nums, i + 1, nums.length - 1);
         
     }
