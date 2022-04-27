@@ -6,8 +6,9 @@ class Solution {
     public void nextPermutation(int[] nums) {
         int i = nums.length - 2;
         //for decreasing order, no next larger permutation, it will be sorted by increasing order
-        //find the pair of numbers where a[i] >= a[i+1]
-        //until descreasing sequence
+        //right to left or end to start
+        //find the pair of numbers where a[i] < a[i+1], break decreasing order from right
+        
         while(i >= 0 && nums[i] >= nums[i + 1]) {
             i--;
         }
