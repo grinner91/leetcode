@@ -1,5 +1,17 @@
 import java.util.*;
 //https://www.algoexpert.io/questions/multi-string-search
+/*
+test case: 
+bigstr: "this is a test"
+smallStr: ["this" "not" "test"]
+result: [true, false, true]
+
+
+bigstr: "thisisatest"
+smallStr: ["this" "end" "test"]
+result: [true, false, true]
+
+*/
 
 class TrieNode {
     Map<Character, TrieNode> children; 
