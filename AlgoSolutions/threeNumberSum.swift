@@ -5,7 +5,7 @@ func threeNumberSum(array: inout [Int], targetSum: Int) -> [[Int]] {
     var tiplets = [[Int]]()
     
     let sortedArr = array.sorted() //O(nlogn)
-    for i in 0..<sortedArr.count { //O(n * n )
+    for i in 0..<sortedArr.count-2 { //O(n * n )
         var left = i + 1;
         var right = sortedArr.count - 1
         while left < right  {
