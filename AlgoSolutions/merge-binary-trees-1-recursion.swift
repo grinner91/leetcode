@@ -12,7 +12,7 @@ class Program {
       right = nil
     }
   }
-
+  //O(n) time, O(h) space
  func mergeBinaryTrees(_ tree1: BinaryTree?, _ tree2: BinaryTree?) -> BinaryTree? {
     return mergeBinaryTreesRecursion(tree1, tree2)
   }
