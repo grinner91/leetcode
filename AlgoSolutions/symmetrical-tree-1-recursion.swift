@@ -12,19 +12,19 @@ class ProgramSymetriRecursion {
             right = nil
         }
     }
-    
+    //O(n) time, O(h) space 
     func symmetricalTree(_ tree: BinaryTree) -> Bool {
-        return symetricalTreeRecursion(tree.left, tree.right)
+        return isSymetricalTreeRecursion(tree.left, tree.right)
     }
     
-    func symetricalTreeRecursion(_ left: BinaryTree?, _ right: BinaryTree? ) -> Bool {
+    func isSymetricalTreeRecursion(_ left: BinaryTree?, _ right: BinaryTree? ) -> Bool {
         
         if left == nil && right == nil { return true }
         else if left?.value != right?.value { return false }
         
-        let leftSymetri =  symetricalTreeRecursion(left?.left, right?.right)
+        let leftSymetri =  isSymetricalTreeRecursion(left?.left, right?.right)
         
-        let rightSymetri =  symetricalTreeRecursion(left?.right, right?.left)
+        let rightSymetri =  isSymetricalTreeRecursion(left?.right, right?.left)
         
         return leftSymetri && rightSymetri
     }
